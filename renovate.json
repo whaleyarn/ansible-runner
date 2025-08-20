@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^\\.github/workflows/.*\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "VERSION: (?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "ansible-runner",
+      "datasourceTemplate": "pypi",
+      "extractVersionTemplate": "^(?<version>.*)$"
+    }
+  ],
+  "extends": [
+    ":automergeMinor"
+  ]
+}
