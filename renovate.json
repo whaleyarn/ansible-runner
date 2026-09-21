@@ -14,7 +14,7 @@
       "extractVersionTemplate": "^(?<version>.*)$"
     }
   ],
-  "extends": [
-    ":automergeMinor"
-  ]
+  "automerge": true,
+  "platformAutomerge": false,
+  "ignoreTests": false
 }
